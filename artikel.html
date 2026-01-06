@@ -8,87 +8,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- RESPONSIVE MOBILE (DITAMBAHKAN TANPA MENGHILANGKAN APA PUN) -->
-  <style>
-    @media (max-width: 576px) {
-      /* Header */
-      header .display-5 {
-        font-size: 1.7rem;
-        line-height: 1.2;
-      }
-      header .lead {
-        font-size: 1rem;
-      }
+  <script>
+function updateClock() {
+  const clock = document.getElementById("clock");
+  if (!clock) return;
 
-      /* Card padding biar nyaman di HP */
-      article.card {
-        padding: 1rem !important;
-        border-radius: 1rem !important;
-      }
+  const now = new Date();
 
-      /* Jam navbar biar tidak kepanjangan */
-      #clock {
-        display: inline-block;
-        max-width: 210px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+  // Hari + tanggal (Indonesia)
+  const tanggal = now.toLocaleDateString("id-ID", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
 
-      /* 50/30/20: dari 3 kolom jadi 1 kolom */
-      #anggaran .row.g-3.text-center .col-4 {
-        width: 100%;
-      }
-      #anggaran .row.g-3.text-center .col-4 .p-3 {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.9rem !important;
-      }
-      #anggaran .row.g-3.text-center h4 {
-        margin: 0;
-        font-size: 1.2rem;
-      }
+  // Jam
+  const jam = now.toLocaleTimeString("id-ID");
 
-      /* Sidebar sticky dimatikan di mobile */
-      aside .sticky-top {
-        position: static !important;
-        top: auto !important;
-      }
+  clock.textContent = `${tanggal} | ${jam}`;
+}
 
-      /* Footer text lebih rapih */
-      footer p {
-        font-size: 0.95rem;
-      }
-    }
+// Jalankan langsung
+updateClock();
 
-    /* Table responsive tetap smooth */
-    .table-responsive {
-      -webkit-overflow-scrolling: touch;
-    }
-  </style>
-</head>
-<body class="bg-light">
+// Update tiap 1 detik
+setInterval(updateClock, 1000);
+</script>
 
-  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">💸 Literasi Keuangan</a>
+      <a class="navbar-brand fw-bold" href="#">💸 Literasi Keuangan</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link active" href="artikel.html">Artikel</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
           <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
         </ul>
-        <div class="ms-lg-auto d-flex align-items-center">
-          <div class="py-1 px-3 rounded-pill bg-light border shadow-sm">
-            <span class="fw-bold text-success small" id="clock">Memuat waktu...</span>
-          </div>
-        </div>
-      </div>
+      <div class="ms-lg-auto d-flex align-items-center">
+    <div class="py-1 px-3 rounded-pill bg-light border shadow-sm">
+        <span class="fw-bold text-success small" id="clock">Memuat waktu...</span>
+    </div>
+</div>
     </div>
   </nav>
 
