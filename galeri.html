@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeri Visual | Literasi Keuangan</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS GABUNGAN BERNUANSA HIJAU UANG */
+    :root {
+      --money-green: #10b981;
+      --deep-green: #064e3b;
+      --soft-green: #ecfdf5;
+      --slate-text: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: var(--slate-text);
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .navbar-brand {
+      color: var(--money-green) !important;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: var(--slate-text) !important;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--money-green) !important;
+    }
+
+    .banner-galeri {
+      background: linear-gradient(135deg, var(--soft-green) 0%, #ffffff 100%);
+      padding: 80px 0;
+      border-bottom: 1px solid #d1fae5;
+      text-align: center;
+    }
+
+    .banner-galeri h1 {
+      color: var(--deep-green);
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.15);
+      border-color: var(--money-green);
+    }
+
+    .img-container {
+      overflow: hidden;
+      border-radius: 18px 18px 0 0;
+    }
+
+    .gallery-item img {
+      transition: transform 0.5s ease;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-caption {
+      padding: 20px;
+      font-weight: 600;
+      color: var(--deep-green);
+      background: #fff;
+    }
+
+    .footer {
+      padding: 60px 0 30px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">💸 Literasi Keuangan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="ms-lg-auto d-flex align-items-center">
+          <div class="py-1 px-3 rounded-pill bg-light border shadow-sm">
+            <span class="fw-bold text-success small" id="clock">Memuat waktu...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="banner-galeri">
+    <div class="container">
+      <h1 class="mb-3">Galeri Visual</h1>
+      <p class="lead text-muted mx-auto" style="max-width: 600px;">Konsep finansial dalam ilustrasi singkat, dirancang untuk memudahkan perjalanan keuangan Anda.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4">
+      
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="gallery-item shadow-sm">
+          <div class="img-container">
+            <img src="img/galeri/danadarurat.jpeg" alt="Tabungan">
+          </div>
+          <div class="gallery-caption text-center">
+            <small class="d-block text-success text-uppercase mb-1" style="letter-spacing: 1px; font-size: 10px;">Security</small>
+            Dana Darurat
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="gallery-item shadow-sm">
+          <div class="img-container">
+            <img src="img/galeri/50.jpg" alt="Anggaran">
+          </div>
+          <div class="gallery-caption text-center">
+            <small class="d-block text-success text-uppercase mb-1" style="letter-spacing: 1px; font-size: 10px;">Planning</small>
+            Anggaran 50/30/20
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="gallery-item shadow-sm">
+          <div class="img-container">
+            <img src="img/galeri/inves.jpeg" alt="Investasi">
+          </div>
+          <div class="gallery-caption text-center">
+            <small class="d-block text-success text-uppercase mb-1" style="letter-spacing: 1px; font-size: 10px;">Growth</small>
+            Investasi Jangka Panjang
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="gallery-item shadow-sm">
+          <div class="img-container">
+            <img src="img/galeri/utang.jpeg" alt="Utang">
+          </div>
+          <div class="gallery-caption text-center">
+            <small class="d-block text-success text-uppercase mb-1" style="letter-spacing: 1px; font-size: 10px;">Strategy</small>
+            Manajemen Utang
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer mt-auto">
+    <div class="container">
+      <p class="mb-1 fw-bold text-success">💸 Literasi Keuangan</p>
+      <p class="mb-1 text-muted">© 2026 Kevin Nathanael Simanjuntak - 251011700065 - 01SIFP001</p>
+      <div id="greeting" class="fw-bold text-success small"></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JAM REAL-TIME (HANYA DITAMBAHKAN) -->
+  <script>
+    function updateClock() {
+      const now = new Date();
+
+      const hari = now.toLocaleDateString('id-ID', { weekday: 'long' });
+      const tanggal = now.toLocaleDateString('id-ID', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      });
+      const waktu = now.toLocaleTimeString('id-ID');
+
+      const clock = document.getElementById("clock");
+      if (clock) {
+        clock.textContent = `${hari}, ${tanggal} • ${waktu}`;
+      }
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+
+</body>
+</html>

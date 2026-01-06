@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artikel & Panduan | Literasi Keuangan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">💸 Literasi Keuangan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="artikel.html">Artikel</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="ms-lg-auto d-flex align-items-center">
+          <div class="py-1 px-3 rounded-pill bg-light border shadow-sm">
+            <span class="fw-bold text-success small" id="clock">Memuat waktu...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5 bg-white border-bottom">
+    <div class="container text-center py-4">
+      <h1 class="display-5 fw-bold text-success">Artikel & Panduan</h1>
+      <p class="lead text-secondary">Keputusan finansial yang bijak dimulai dari pemahaman yang mendalam.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-5">
+      
+      <div class="col-lg-8">
+        
+        <article class="card border-0 shadow-sm p-4 p-md-5 mb-5 rounded-4" id="anggaran">
+          <div class="mb-3 text-success fw-bold">#Budgeting</div>
+          <h2 class="fw-bold mb-3">Metode Anggaran 50/30/20</h2>
+          <p class="text-secondary mb-4">Metode ini adalah cara paling sederhana untuk mengontrol arus kas Anda tanpa merasa tertekan.</p>
+          
+          <div class="row g-3 text-center mb-4">
+            <div class="col-4">
+              <div class="p-3 bg-success bg-opacity-10 rounded-3">
+                <h4 class="fw-bold text-success mb-0">50%</h4>
+                <small class="text-dark">Kebutuhan</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="p-3 bg-info bg-opacity-10 rounded-3">
+                <h4 class="fw-bold text-info mb-0">30%</h4>
+                <small class="text-dark">Keinginan</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="p-3 bg-warning bg-opacity-10 rounded-3">
+                <h4 class="fw-bold text-warning mb-0">20%</h4>
+                <small class="text-dark">Tabungan</small>
+              </div>
+            </div>
+          </div>
+
+          [Image of the 50-30-20 budgeting rule pie chart]
+        </article>
+
+        <article class="card border-0 shadow-sm p-4 p-md-5 mb-5 rounded-4" id="investasi">
+          <h2 class="fw-bold mb-4">Panduan Investasi Awal</h2>
+          <p class="text-secondary">Pahami perbedaan instrumen investasi sebelum menaruh uang Anda:</p>
+          
+          <div class="table-responsive">
+            <table class="table table-hover align-middle border-top">
+              <thead class="table-light text-success">
+                <tr>
+                  <th>Instrumen</th>
+                  <th>Risiko</th>
+                  <th>Likuiditas</th>
+                  <th>Potensi Return</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">Reksadana Pasar Uang</td>
+                  <td><span class="badge bg-success-subtle text-success">Rendah</span></td>
+                  <td>Tinggi</td>
+                  <td>3-5% / thn</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Obligasi Negara</td>
+                  <td><span class="badge bg-info-subtle text-info">Sedang</span></td>
+                  <td>Sedang</td>
+                  <td>6-8% / thn</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Saham (Blue Chip)</td>
+                  <td><span class="badge bg-danger-subtle text-danger">Tinggi</span></td>
+                  <td>Tinggi</td>
+                  <td>>10% / thn</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card border-0 shadow-sm p-4 p-md-5 mb-5 rounded-4 border-start border-success border-5" id="darurat">
+          <h2 class="fw-bold mb-3">Pentingnya Dana Darurat</h2>
+          <p class="text-secondary">Dana darurat adalah "pelampung" finansial Anda. Idealnya, simpan 3-6 kali pengeluaran bulanan di rekening terpisah yang mudah dicairkan.</p>
+          <div class="alert alert-success d-flex align-items-center rounded-3">
+            <span class="me-3 fs-3">💡</span>
+            <div><strong>Tips:</strong> Mulailah dengan target kecil, misalnya Rp 1 juta pertama, sebelum mengejar target 6 bulan pengeluaran.</div>
+          </div>
+        </article>
+
+      </div>
+
+      <aside class="col-lg-4">
+        <div class="sticky-top" style="top: 100px;">
+          <div class="card border-0 shadow-sm p-4 rounded-4 mb-4">
+            <h5 class="fw-bold mb-3">Daftar Isi</h5>
+            <nav class="nav flex-column">
+              <a class="nav-link text-dark px-0 border-bottom py-2" href="#anggaran">📊 Metode 50/30/20</a>
+              <a class="nav-link text-dark px-0 border-bottom py-2" href="#investasi">📈 Panduan Investasi</a>
+              <a class="nav-link text-dark px-0 border-bottom py-2" href="#darurat">🛡️ Dana Darurat</a>
+              <a class="nav-link text-dark px-0 py-2" href="#utang">💸 Strategi Utang</a>
+            </nav>
+          </div>
+          
+          <div class="card bg-success text-white p-4 rounded-4 shadow">
+            <h5 class="fw-bold">Butuh Bantuan?</h5>
+            <p class="small opacity-75">Konsultasikan rencana keuanganmu dengan tim ahli kami secara gratis.</p>
+            <a href="kontak.html" class="btn btn-light text-success fw-bold w-100 rounded-pill">Hubungi Kami</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="footer py-5 mt-5 bg-white border-top">
+    <div class="container text-center">
+      <p class="mb-1 fw-bold text-success">💸 Literasi Keuangan</p>
+      <p class="mb-1 text-muted">© 2026 Kevin Nathanael Simanjuntak - 251011700065 - 01SIFP001</p>
+      <div id="greeting" class="fw-bold text-success"></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JAM REAL-TIME (DITAMBAHKAN TANPA MENGHILANGKAN APA PUN) -->
+  <script>
+    function updateClock() {
+      const now = new Date();
+
+      const hari = now.toLocaleDateString('id-ID', { weekday: 'long' });
+      const tanggal = now.toLocaleDateString('id-ID', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      });
+      const waktu = now.toLocaleTimeString('id-ID');
+
+      const clock = document.getElementById("clock");
+      if (clock) {
+        clock.textContent = `${hari}, ${tanggal} • ${waktu}`;
+      }
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Literasi Keuangan | Cerdas Finansial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.js">
+</head>
+<body>
+
+  <script>
+function updateClock() {
+  const clock = document.getElementById("clock");
+  if (!clock) return;
+
+  const now = new Date();
+
+  // Hari + tanggal (Indonesia)
+  const tanggal = now.toLocaleDateString("id-ID", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+
+  // Jam
+  const jam = now.toLocaleTimeString("id-ID");
+
+  clock.textContent = `${tanggal} | ${jam}`;
+}
+
+// Jalankan langsung
+updateClock();
+
+// Update tiap 1 detik
+setInterval(updateClock, 1000);
+</script>
+
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">💸 Literasi Keuangan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      <div class="ms-lg-auto d-flex align-items-center">
+    <div class="py-1 px-3 rounded-pill bg-light border shadow-sm">
+        <span class="fw-bold text-success small" id="clock">Memuat waktu...</span>
+    </div>
+</div>
+    </div>
+  </nav>
+
+  <section class="banner">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 text-center text-lg-start">
+          <span class="badge bg-success bg-opacity-10 text-success mb-3 px-3 py-2">Edukasi Finansial Terpercaya</span>
+          <h1 class="mb-4">Kelola Uangmu,<br><span style="color: var(--money-green);">Kuasai Masa Depanmu.</span></h1>
+          <p class="mb-5 lead">Belajar cara mengatur anggaran, membangun dana darurat, dan memulai investasi dengan cara yang paling sederhana dan efektif.</p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+            <a href="artikel.html" class="btn btn-custom">Mulai Belajar</a>
+            <a href="#fitur" class="btn btn-outline-success border-2 py-3 px-4 rounded-3 fw-bold">Lihat Strategi</a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block text-center">
+           <img src="img/beranda/banner.jpg" alt="Finansial" class="img-fluid" style="max-height: 400px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fitur" class="container py-5 my-5">
+    <div class="text-center mb-5">
+      <h6 class="text-success fw-bold text-uppercase tracking-widest">Metodologi</h6>
+      <h2 class="fw-bold text-dark display-5">Strategi Cerdas Finansial</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-5 text-center h-100 border-0 shadow-sm">
+          <div class="icon-box">📊</div>
+          <h5 class="card-title fw-bold">Metode 50/30/20</h5>
+          <p class="text-muted">Bagi pemasukan Anda dengan cerdas: 50% kebutuhan, 30% keinginan, dan 20% untuk masa depan Anda.</p>
+          <a href="artikel.html#anggaran" class="text-success fw-bold text-decoration-none mt-3 d-inline-block">Baca Selengkapnya →</a>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card p-5 text-center h-100 border-0 shadow-sm">
+          <div class="icon-box">🛡️</div>
+          <h5 class="card-title fw-bold">Dana Darurat</h5>
+          <p class="text-muted">Siapkan jaring pengaman sebesar 3 hingga 6 bulan biaya hidup untuk ketenangan pikiran Anda.</p>
+          <a href="artikel.html#darurat" class="text-success fw-bold text-decoration-none mt-3 d-inline-block">Lihat Panduan →</a>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card p-5 text-center h-100 border-0 shadow-sm">
+          <div class="icon-box">📈</div>
+          <h5 class="card-title fw-bold">Investasi Awal</h5>
+          <p class="text-muted">Mulailah sedini mungkin. Biarkan bunga majemuk bekerja untuk kekayaan jangka panjang Anda.</p>
+          <a href="artikel.html#investasi" class="text-success fw-bold text-decoration-none mt-3 d-inline-block">Pelajari Aset →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <div class="mb-4">
+        <a href="#" class="navbar-brand fw-bold">💸 Literasi Keuangan</a>
+      </div>
+      <p class="mb-1 text-muted">© 2026 Kevin Nathanael Simanjuntak - 251011700065 - 01SIFP001</p>
+      <p id="greeting" class="fw-medium text-success"></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
