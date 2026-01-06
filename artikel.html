@@ -7,6 +7,66 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- RESPONSIVE MOBILE (DITAMBAHKAN TANPA MENGHILANGKAN APA PUN) -->
+  <style>
+    @media (max-width: 576px) {
+      /* Header */
+      header .display-5 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+      }
+      header .lead {
+        font-size: 1rem;
+      }
+
+      /* Card padding biar nyaman di HP */
+      article.card {
+        padding: 1rem !important;
+        border-radius: 1rem !important;
+      }
+
+      /* Jam navbar biar tidak kepanjangan */
+      #clock {
+        display: inline-block;
+        max-width: 210px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      /* 50/30/20: dari 3 kolom jadi 1 kolom */
+      #anggaran .row.g-3.text-center .col-4 {
+        width: 100%;
+      }
+      #anggaran .row.g-3.text-center .col-4 .p-3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.9rem !important;
+      }
+      #anggaran .row.g-3.text-center h4 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      /* Sidebar sticky dimatikan di mobile */
+      aside .sticky-top {
+        position: static !important;
+        top: auto !important;
+      }
+
+      /* Footer text lebih rapih */
+      footer p {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Table responsive tetap smooth */
+    .table-responsive {
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
 </head>
 <body class="bg-light">
 
@@ -77,7 +137,8 @@
           <h2 class="fw-bold mb-4">Panduan Investasi Awal</h2>
           <p class="text-secondary">Pahami perbedaan instrumen investasi sebelum menaruh uang Anda:</p>
           
-          <div class="table-responsive">
+          <!-- TABEL (DESKTOP) -->
+          <div class="table-responsive d-none d-md-block">
             <table class="table table-hover align-middle border-top">
               <thead class="table-light text-success">
                 <tr>
@@ -108,6 +169,36 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <!-- VERSI MOBILE (CARD) -->
+          <div class="d-md-none mt-3">
+            <div class="card border-0 shadow-sm mb-3 rounded-4 p-3">
+              <div class="fw-bold">Reksadana Pasar Uang</div>
+              <div class="small text-secondary mt-2">
+                Risiko: <span class="badge bg-success-subtle text-success">Rendah</span><br>
+                Likuiditas: Tinggi<br>
+                Potensi Return: 3-5% / thn
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-3 rounded-4 p-3">
+              <div class="fw-bold">Obligasi Negara</div>
+              <div class="small text-secondary mt-2">
+                Risiko: <span class="badge bg-info-subtle text-info">Sedang</span><br>
+                Likuiditas: Sedang<br>
+                Potensi Return: 6-8% / thn
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-2 rounded-4 p-3">
+              <div class="fw-bold">Saham (Blue Chip)</div>
+              <div class="small text-secondary mt-2">
+                Risiko: <span class="badge bg-danger-subtle text-danger">Tinggi</span><br>
+                Likuiditas: Tinggi<br>
+                Potensi Return: &gt;10% / thn
+              </div>
+            </div>
           </div>
         </article>
 
